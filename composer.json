@@ -1,0 +1,19 @@
+{
+    "name": "shipilov/myproject",
+    "type": "project",
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "Artem Shipilov",
+            "email": "avs.artem@list.ru"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "MyProject\\": "src/MyProject/"
+        }
+    },
+    "require": {
+        "erusev/parsedown": "^1.7"
+    }
+}
