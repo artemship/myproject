@@ -63,8 +63,8 @@ class ArticlesController extends AbstractController
             throw new UnauthorizedException();
         }
 
-        if (!$this->user->isAdmin()) {
-            throw new ForbiddenException('Статьи могут добавлять только администраторы');
+        if (!$this->user->isAdmin() && !$this->user->isConfirmed()) {
+            throw new ForbiddenException('Статьи могут добавлять только администраторы или подтвержденные пользователи');
         }
 
         if (!empty($_POST)) {

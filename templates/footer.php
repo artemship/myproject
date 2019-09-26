@@ -4,7 +4,9 @@
     <div class="sidebarHeader">Меню</div>
     <ul>
         <li><a href="/">Главная страница</a></li>
-        <li><a href="/about-me">Обо мне</a></li>
+        <?php if (!empty($user)): ?>
+            <li><a href="/articles/add">Добавить статью</a></li>
+        <?php endif; ?>
     </ul>
 </td>
 </tr>
